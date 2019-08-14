@@ -9,7 +9,7 @@
 //    alignment changes the Boids Alignment    //
 //         Try changing 1.0 into 100           //
 /////////////////////////////////////////////////
-alignment = 10000.0;
+alignment = 1.0;
 
 ////////////////////////////////////////////////
 //    cohesion changes the Boids Cohesion     //
@@ -21,7 +21,7 @@ cohesion = 1.0;
 //  separation changes the Boids Separation     //
 //         Try changing 3.0 into 300            //
 //////////////////////////////////////////////////
-separation = 3.0;
+separation = 3000.0;
 
 /////////////////////////////////////////////////////////////////////////////
 //  We can also change the Boids size, speed and turning speed with        //
@@ -34,7 +34,7 @@ separation = 3.0;
 //  boidSize sets the size of each Boid  //
 //        Try changing 4 into 10         //
 ///////////////////////////////////////////
-boidSize = 15;
+boidSize = 4;
 
 /////////////////////////////////////////////////////////////////
 //  boidSpeed sets the maximum speed that the Boids can reach  //
@@ -68,7 +68,7 @@ Boid.prototype.render = function() {
   ///////////////////////////////////////////////////////////////
   //  fill(255, 89, 0) sets the colour of the Boids to orange  //
   ///////////////////////////////////////////////////////////////
-  fill(random(0,255), random(0,255), random(0,255));
+  fill(255, 89, 0);
 
   ////////////////////////////////////////////////////////////////
   //  fill(157, 0, 255) sets the colour of the Boids to purple  //
@@ -93,7 +93,7 @@ Boid.prototype.render = function() {
   rotate(theta);
 
   //////////////////////////////////////////////////////
-  //   We have precoded four different shapes below:  //
+  //   We have precoded four different shapes below:     //
   //  Triangles, Squares, Rectangles, and Circles     //
   //////////////////////////////////////////////////////
 
@@ -170,7 +170,7 @@ Boid.prototype.render = function() {
   //         To change the image of the Boid, please delete or add "//"      //
   //                     in front of the "image" code below                  //
   /////////////////////////////////////////////////////////////////////////////
-  //image(animals[1], this.position.x, this.position.y, animals[1].width/20, animals[1].height/25);
+  //image(animals[1], this.position.x, this.position.y, animals[1].width/75, animals[1].height/75);
 
   //////////////////////////////////////////////////////////////////////////////
   //                                 MONKEYS:                                 //
