@@ -10,7 +10,7 @@
 
 
 //var declares a variable of any kind (integer, string, float)
-// Many variable will be assigned a value 
+// Many variable will be assigned a value
 //Ex: barWidth = 20 makes the value of the variable barWidth 20
 //Many variable will not yet be assigned a value
 //Ex: var flock;
@@ -54,6 +54,7 @@ function preload() {
 function setup() {
   //colorMode(RGB, width, height, 100);
   // createCanvas(1920, 1080);
+  window.resizeTo(displayWidth, displayHeight)
   createCanvas(window.innerWidth, window.innerHeight);
   //createCanvas(600, 600);
   // var r = floor(random(0, flowers.length));
@@ -90,7 +91,7 @@ function draw() {
   noStroke();
 
   //rectMode(CORNERS) draws a rectangle based on the position of
-  //the bottom left and top right corners of the rectangle 
+  //the bottom left and top right corners of the rectangle
   //Ex: (Bottom Left x, Bottom Left Y, Top Right X, Top Right Y)
   rectMode(CORNERS);
 
@@ -146,7 +147,7 @@ function draw() {
   //scrolling.display();
 
 
-  //flock.run draws the Boids, gives the Boids movement, 
+  //flock.run draws the Boids, gives the Boids movement,
   //gives the boids their behaviours (Sep, Ali, Coh) and
   //allows the Boids to wrap around the world
   flock.run();
@@ -159,9 +160,9 @@ function Boid(x, y) {
 
 
   //////////////////////////////////////////
-  //                TIPS:                 //  
+  //                TIPS:                 //
   //       Try changing the numbers       //
-  //   ex: change this.r from 4 into 10   //  
+  //   ex: change this.r from 4 into 10   //
   //         What did you notice?         //
   //////////////////////////////////////////
 
@@ -172,27 +173,27 @@ function Boid(x, y) {
 
   /////////////////////////////////////////////////////////////////////
   //   this.velolcity sets the direction that the Boids will face    //
-  /////////////////////////////////////////////////////////////////////  
+  /////////////////////////////////////////////////////////////////////
   this.velocity = createVector(random(-1, 1), random(-1, 1));
 
   //////////////////////////////////////////////////////////////////
   //   this.position sets the x and y coordinates of the Boids    //
-  //////////////////////////////////////////////////////////////////  
+  //////////////////////////////////////////////////////////////////
   this.position = createVector(x, y);
 
   //////////////////////////////////////////
   //   this.r set the size of each Boid   //
-  //////////////////////////////////////////  
+  //////////////////////////////////////////
   this.r = boidSize;
 
   ///////////////////////////////////////////////////////////////////////
   //   this.maxspeed set the maximum speed that the Boids can reach    //
-  /////////////////////////////////////////////////////////////////////// 
+  ///////////////////////////////////////////////////////////////////////
   this.maxspeed = boidSpeed;
 
   ////////////////////////////////////////////////////////////
   //   this.maxforce sets the turning speed of the Boids    //
-  ////////////////////////////////////////////////////////////  
+  ////////////////////////////////////////////////////////////
   this.maxforce = boidTurn;
 
 }

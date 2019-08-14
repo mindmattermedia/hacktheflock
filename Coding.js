@@ -9,7 +9,7 @@
 //    alignment changes the Boids Alignment    //
 //         Try changing 1.0 into 100           //
 /////////////////////////////////////////////////
-alignment = 100.0;
+alignment = 10000.0;
 
 ////////////////////////////////////////////////
 //    cohesion changes the Boids Cohesion     //
@@ -68,7 +68,7 @@ Boid.prototype.render = function() {
   ///////////////////////////////////////////////////////////////
   //  fill(255, 89, 0) sets the colour of the Boids to orange  //
   ///////////////////////////////////////////////////////////////
-  fill(255, 89, 0);
+  fill(random(0,255), random(0,255), random(0,255));
 
   ////////////////////////////////////////////////////////////////
   //  fill(157, 0, 255) sets the colour of the Boids to purple  //
